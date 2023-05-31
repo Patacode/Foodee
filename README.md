@@ -44,5 +44,5 @@ The project has been built with several tools and services, here is the list:
 
 This little project has been made by:
 
-* Maximilien Ballesteros (56080)
+* Maximilien Ballesteros
 
