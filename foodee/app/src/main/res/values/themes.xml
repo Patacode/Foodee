@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Foodee" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_primary</item>
+        <item name="colorOnPrimary">@color/color_on_primary</item>
+        <item name="colorSecondary">@color/color_secondary</item>
+        <item name="colorAccent">@color/color_accent</item>
+        <item name="colorPrimaryDark">@color/color_primary_dark</item>
+        <item name="colorOnSecondary">@color/color_on_secondary</item>
+        <item name="android:textColorPrimary">@color/color_on_primary</item>
+        <item name="android:navigationBarColor">@color/color_on_primary</item>
+    </style>
+    <style name="Theme.Foodee.Dark" parent="Theme.Foodee">
+        <item name="colorOnPrimary">@color/color_primary</item>
+    </style>
+</resources>

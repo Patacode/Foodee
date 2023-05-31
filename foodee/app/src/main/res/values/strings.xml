@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">Foodee</string>
+    <string name="foodee_text">Foodee.</string>
+    <string name="author">Maximilien\nBallesteros</string>
+    <string name="login_text">Login</string>
+    <string name="email_input_description">Input to enter email address</string>
+    <string name="email_hint">Enter your email address</string>
+    <string name="password_hint">Enter your password</string>
+    <string name="name_hint">Enter your name</string>
+    <string name="about_text">About</string>
+    <string name="about_me_text">About me</string>
+    <string name="id_text">Matricule</string>
+    <string name="id_text_value">56080</string>
+    <string name="name_text">Name</string>
+    <string name="name_text_value">Maximilien</string>
+    <string name="surname_text">Surname</string>
+    <string name="surname_text_value">Ballesteros</string>
+    <string name="lorem_ipsum_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet mi luctus, accumsan augue sit amet, rutrum leo. Vivamus tempus ultricies placerat. Pellentesque aliquet magna eget venenatis elementum.Sed orci diam, maximus nec mi ut, egestas sagittis ex. Duis eu est vestibulum ipsum vestibulum placerat. Sed ornare,libero nec pellentesque hendrerit, elit orci accumsan mauris, quis laoreet metus ex non lorem. In malesuada purus sit ametdui pellentesque cursus. Maecenas sit amet lobortis diam. Mauris eget ante sit amet tellus ultrices bibendum. Ut quis auctorarcu.</string>
+    <string name="person_icon_alt">Fill icon of a person</string>
+    <string name="existingAccountText">Existing email accounts</string>
+    <string name="email_choice_text">Choose an email from the list</string>
+    <string name="home_text">Home</string>
+    <string name="content_description_home">Home</string>
+    <string name="content_description_login">Login</string>
+    <string name="content_description_about">About</string>
+    <string name="content_description_fab">Login</string>
+    <string name="profile_text">Profile</string>
+    <string name="camera_text">Camera</string>
+
+    <string name="product_search_button">Search object</string>
+    <string name="cd_settings_button">Settings</string>
+    <string name="cd_close_button">Back</string>
+    <string name="cd_flash_button">Toggle camera flash</string>
+    <string name="pref_key_rear_camera_preview_size" translatable="false">rcpvs</string>
+    <string name="pref_key_rear_camera_picture_size" translatable="false">rcpts</string>
+    <string name="pref_key_enable_auto_search" translatable="false">pkeas</string>
+    <string name="prompt_point_at_a_barcode">Point your camera at a barcode</string>
+    <string name="prompt_move_camera_closer">Move closer to search</string>
+    <string name="prompt_searching">Searching&#8230;</string>
+    <string name="pref_key_barcode_reticle_width" translatable="false">barcode_brw</string>
+    <string name="pref_key_barcode_reticle_height" translatable="false">barcode_brh</string>
+    <string name="pref_key_enable_barcode_size_check" translatable="false">barcode_ebsc</string>
+    <string name="pref_key_minimum_barcode_width" translatable="false">barcode_mbw</string>
+    <string name="pref_key_delay_loading_barcode_result" translatable="false">barcode_dlbr</string>
+    <string name="product_description">Product Description</string>
+    <string name="name_label_text">Name</string>
+    <string name="brand_label_text">Brand</string>
+    <string name="quantity_label_text">Quantity</string>
+    <string name="create_account_text"><u>Sign up</u></string>
+    <string name="signup_text">Sign up</string>
+    <string name="connect_text"><u>Login</u></string>
+    <string name="your_profile_text">Your Profile</string>
+    <string name="signout_text">Sign out</string>
+    <string name="welcome_text">Hello</string>
+    <string name="favorite_text">Favorite</string>
+
+    <string name="web_client_id">313456260719-veardv4h04tnpo6k19bmbr2opr58po6n.apps.googleusercontent.com</string>
+    <string name="no_fav_text">No favorites</string>
+    <string name="no_fridge_text">No products in your fridge</string>
+    <string name="fridge_text">Fridge</string>
+    <string name="exp_date_hint">Enter the expiration date for the product</string>
+    <string name="exp_date_text">Enter the expiration date</string>
+    <string name="exp_date_btn_text">Confirm</string>
+</resources>

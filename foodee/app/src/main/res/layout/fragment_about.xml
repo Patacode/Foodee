@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mobg5.g56080.foodee.fragment.about.AboutFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/aboutLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/aboutIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:contentDescription="@string/person_icon_alt"
+            android:minWidth="@dimen/about_me_icon_size"
+            android:minHeight="@dimen/about_me_icon_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/person_fill" />
+
+        <TextView
+            android:id="@+id/aboutTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="@string/about_text"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="@dimen/about_me_text_font_size"
+            app:layout_constraintBottom_toBottomOf="@+id/aboutIcon"
+            app:layout_constraintStart_toEndOf="@+id/aboutIcon" />
+
+        <TextView
+            android:id="@+id/aboutName"
+            style="@style/rectangle"
+            android:layout_width="212dp"
+            android:layout_height="101dp"
+            android:text="@string/author"
+            app:layout_constraintBottom_toTopOf="@+id/aboutMatricule"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/aboutMatricule"
+            style="@style/rectangle"
+            android:text="@string/id_text_value"
+            android:textSize="12sp"
+            android:textColor="@color/black_dark_shadow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutName" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

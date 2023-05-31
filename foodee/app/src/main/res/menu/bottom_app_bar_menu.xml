@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/fridge"
+        android:icon="@drawable/ic_baseline_door_front_24"
+        android:title="@string/fridge_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/favorite"
+        android:icon="@drawable/ic_baseline_favorite_24"
+        android:title="@string/favorite_text"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/login"
+        android:icon="@drawable/ic_baseline_login_24"
+        android:title="@string/login_text"
+        app:showAsAction="ifRoom" />
+</menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    
+    <data>
+        <variable
+            name="mainViewModel"
+            type="com.mobg5.g56080.foodee.MainViewModel" />
+    </data>
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/testt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <fragment
+                android:id="@+id/navHostFragment"
+                android:name="androidx.navigation.fragment.NavHostFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:navGraph="@navigation/navigation"
+                app:defaultNavHost="true" />
+
+            <com.google.android.material.bottomappbar.BottomAppBar
+                android:id="@+id/bottomAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                app:elevation="0dp"
+                app:menu="@menu/bottom_app_bar_menu"
+                app:navigationIcon="@drawable/ic_baseline_menu_24" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/content_description_fab"
+                android:onClick="@{() -> mainViewModel.onFabAction()}"
+                app:backgroundTint="?attr/colorPrimary"
+                app:borderWidth="0dp"
+                app:elevation="6dp"
+                app:fabSize="normal"
+                app:layout_anchor="@id/bottomAppBar"
+                app:srcCompat="@drawable/ic_baseline_camera_alt_24" />
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navView"
+            android:layout_width="72dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/color_primary"
+            android:textSize="@dimen/navigation_drawer_font_size"
+            app:itemTextColor="@color/nav_drawer_item"
+            app:itemIconTint="@color/nav_drawer_item"
+            app:itemTextAppearance="@style/poppinsMedium"
+            app:menu="@menu/navigation_drawer_menu" />
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

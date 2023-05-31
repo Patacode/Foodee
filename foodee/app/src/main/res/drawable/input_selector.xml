@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <layer-list>
+            <!-- Gray shadow. -->
+            <item android:top="@dimen/login_button_shadow_dxy">
+                <shape>
+                    <solid android:color="@color/black_light_shadow" />
+                    <corners android:radius="3dp" />
+                </shape>
+            </item>
+            <!-- White foreground. -->
+            <item android:bottom="3dp" android:right="1dp" android:left="1dp">
+                <shape>
+                    <solid android:color="@color/color_primary" />
+                    <corners android:radius="3dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.login.LoginFragment"
+        android:label="@string/login_text"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signupFragment"
+            app:destination="@id/signupFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.about.AboutFragment"
+        android:label="@string/about_text"
+        tools:layout="@layout/fragment_about" >
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.home.HomeFragment"
+        android:label="@string/home_text"
+        tools:layout="@layout/fragment_home" >
+    </fragment>
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.mobg5.g56080.foodee.camera.CameraFragment"
+        android:label="@string/camera_text"
+        tools:layout="@layout/fragment_camera" >
+        <action
+            android:id="@+id/action_cameraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_cameraFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productDetailFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.foodproduct.FoodProductFragment"
+        android:label="Food product detail"
+        tools:layout="@layout/fragment_product_detail" >
+
+        <argument
+            android:name="barcode"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.signup.SignupFragment"
+        android:label="Sign up"
+        tools:layout="@layout/fragment_signup">
+        <action
+            android:id="@+id/action_signupFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_signupFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.user.UserFragment"
+        android:label="User profile"
+        tools:layout="@layout/fragment_user">
+        <action
+            android:id="@+id/action_userFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.favorites.FavoriteFragment"
+        android:label="Favorites"
+        tools:layout="@layout/fragment_favorites">
+        <action
+            android:id="@+id/action_favoriteFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fridgeFragment"
+        android:name="com.mobg5.g56080.foodee.fragment.fridge.FridgeFragment"
+        android:label="FridgeFragment"
+        tools:layout="@layout/fragment_fridge">
+        <action
+            android:id="@+id/action_fridgeFragment_to_productDetailFragment"
+            app:destination="@id/productDetailFragment" />
+    </fragment>
+</navigation>

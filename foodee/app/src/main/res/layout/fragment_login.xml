@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.mobg5.g56080.foodee.fragment.login.LoginFragment">
+
+    <data>
+        <variable
+            name="loginViewModel"
+            type="com.mobg5.g56080.foodee.fragment.login.LoginViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/loginLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/loginTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="@string/login_text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/main_title_font_size"
+                app:layout_constraintBottom_toTopOf="@+id/inputEmail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <EditText
+                android:id="@+id/inputEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:width="290sp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/input_selector"
+                android:drawableStart="@drawable/envelope"
+                android:drawablePadding="@dimen/mail_input_drawable_padding"
+                android:ems="10"
+                android:hapticFeedbackEnabled="false"
+                android:hint="@string/email_hint"
+                android:inputType="textEmailAddress"
+                android:minHeight="@dimen/mail_input_min_height"
+                android:paddingStart="@dimen/mail_input_padding_rl"
+                android:paddingEnd="@dimen/mail_input_padding_rl"
+                android:text="@={loginViewModel.userForm.email}"
+                android:textAlignment="center"
+                android:textColor="@color/input_color"
+                android:textColorHint="#00646864"
+                android:textCursorDrawable="@drawable/input_cursor_selector"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/inputPassword"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
+
+            <EditText
+                android:id="@+id/inputPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:width="290sp"
+                android:autofillHints="emailAddress"
+                android:background="@drawable/input_selector"
+                android:drawableStart="@drawable/key_fill"
+                android:drawablePadding="@dimen/mail_input_drawable_padding"
+                android:ems="10"
+                android:hapticFeedbackEnabled="false"
+                android:hint="@string/email_hint"
+                android:inputType="textPassword"
+                android:minHeight="@dimen/mail_input_min_height"
+                android:paddingStart="@dimen/mail_input_padding_rl"
+                android:paddingEnd="@dimen/mail_input_padding_rl"
+                android:text="@={loginViewModel.userForm.password}"
+                android:textAlignment="center"
+                android:textColor="@color/input_color"
+                android:textColorHint="#00646864"
+                android:textCursorDrawable="@drawable/input_cursor_selector"
+                android:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/signup_textview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rectangle"
+                android:backgroundTint="@color/color_primary"
+                android:fontFamily="@font/poppins_medium"
+                android:onClick="@{() -> loginViewModel.onCheckInput()}"
+                android:paddingStart="@dimen/login_button_padding_rl"
+                android:paddingTop="@dimen/login_button_padding_tb"
+                android:paddingEnd="@dimen/login_button_padding_rl"
+                android:paddingBottom="@dimen/login_button_padding_tb"
+                android:text="@string/login_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/black"
+                android:textSize="@dimen/login_button_font_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/signup_textview" />
+
+            <TextView
+                android:id="@+id/signup_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:text="@string/create_account_text"
+                android:textSize="20sp"
+                android:onClick="@{() -> loginViewModel.onMoveToSignupPage()}"
+                app:layout_constraintBottom_toTopOf="@+id/loginButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>
